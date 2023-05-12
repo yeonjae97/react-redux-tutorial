@@ -7,4 +7,6 @@ const rootReducer = combineReducers({
   todos,
 });
 
+// Provider, useSelector, useDispatcher
+
 export default rootReducer;

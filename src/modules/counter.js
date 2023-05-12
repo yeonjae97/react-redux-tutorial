@@ -3,8 +3,8 @@ const INCREASE = 'counter/INCREASE';
 const DECREASE = 'counter/DECREASE';
 
 // 액션 생성 함수
-const increase = () => ({type: INCREASE});
-const decrease = () => ({type: DECREASE});
+export const increase = () => ({type: INCREASE});
+export const decrease = () => ({type: DECREASE});
 
 const initialState = {
   number: 0
@@ -18,7 +18,7 @@ function counter(state = initialState, action){
       }
     case DECREASE:
       return {
-        number: state.number + 1
+        number: state.number - 1
       }
     default:
       return state;

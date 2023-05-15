@@ -31,7 +31,12 @@ const Todos = ({
     onInsert(input);
     onChangeInput('');    
   };
-  const onChange = e => onChangeInput(e.target.value);
+  const onChange = e => {
+    // 이벤트 발생시에 문제가 생긴다면 e에 대한 로깅 작업을 해야한다.
+    // console.log(e);
+    // console.log(e.target);
+    onChangeInput(e.target.value);
+  };
   return (
     <div>
       <form onSubmit={onSubmit}>
